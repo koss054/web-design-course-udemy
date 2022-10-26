@@ -3,10 +3,18 @@ body {
     font-family: 'Heebo', sans-serif;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     height: 80px;
     background-color: #FFF;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .logo {
@@ -20,4 +28,16 @@ header nav {
 
 header nav ul li {
     display: inline-block;
+}
+
+header nav ul li a {
+    color: #3E3E3E;
+    font-size: 15px;
+    letter-spacing: 0.37px;
+    margin-right: 24px;
+    text-decoration: none;
+}
+
+header nav ul li:last-of-type {
+    margin: 0;
 }
