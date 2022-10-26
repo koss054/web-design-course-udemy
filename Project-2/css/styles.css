@@ -2,3 +2,22 @@ body {
     margin: 0;
     font-family: 'Heebo', sans-serif;
 }
+
+header {
+    height: 80px;
+    background-color: #FFF;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.15);
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul li {
+    display: inline-block;
+}
