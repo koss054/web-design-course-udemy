@@ -132,6 +132,13 @@ section.hero img {
     line-height: 24px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hero-content button:hover{
+    background-color: white;
+    color: #3E50E5;
+    border: 1px solid #3E50E5;
 }
 
 section.best-sellers {
@@ -174,6 +181,12 @@ section.best-sellers .product-slider .product {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+section.best-sellers .product-slider .product:hover .product-info button {
+    color: #fff;
+    background-color: #3E50E5;
+    cursor: pointer;
 }
 
 section.best-sellers .product-slider .product img {
@@ -312,6 +325,13 @@ section.newsletter form button {
     line-height: 21px
 }
 
+section.newsletter form button:hover {
+    color: #3E50E5;
+    border: 1px solid #3E3E3E;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 footer .bottom-nav {
     padding: 60px 0;
     background-color: #3e3e3e;
@@ -347,6 +367,10 @@ footer .bottom-nav ul li a {
     margin-bottom: 10px;
     text-decoration: none;
     display: block;
+}
+
+footer .bottom-nav ul li a:hover {
+    color: #3E50E5;
 }
 
 footer .copyright-text {
