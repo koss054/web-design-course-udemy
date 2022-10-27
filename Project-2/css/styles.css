@@ -226,6 +226,18 @@ section.best-sellers .product-slider .product .product-info .price {
     margin-top: 0;
 }
 
+section.best-sellers .product-slider .product .product-info .price .original-price {
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    line-height: 30px;
+    text-decoration: line-through;
+}
+
+section.best-sellers .product-slider .product .product-info .price .discount-price {
+    color: #EC1C1C;
+}
 section.best-sellers .product-slider .product .product-info button {
     height: 50px;
     width: 219.5px;
@@ -237,17 +249,4 @@ section.best-sellers .product-slider .product .product-info button {
     letter-spacing: 0.4px;
     line-height: 24px;
     text-transform: uppercase;
-}
-
-.original-price {
-    color: #9B9B9B;
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 0.4px;
-    line-height: 30px;
-    text-decoration: line-through;
-}
-
-.discount-price {
-    color: #EC1C1C;
 }
