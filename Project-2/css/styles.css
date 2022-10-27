@@ -132,16 +132,41 @@ section.hero img {
     text-transform: uppercase;
 }
 
+section.best-sellers {
+    padding-top: 80px;
+}
+
 section.best-sellers h2 {
     text-align: center;
     font-size: 34px;
     letter-spacing: 0.85px;
     line-height: 42px;
     font-weight: normal;
+    margin: 0 0 14px 0;
 }
 
 section.best-sellers hr{
     border: none;
     border-top: 5px solid #67F11D;
     width: 66px;
+}
+
+section.best-sellers .product-slider {
+}
+
+section.best-sellers .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.best-sellers .product-slider .product {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 33%;
+    text-align: center;
+}
+
+.discount-price {
+    color: gainsboro;
+    text-decoration: line-through;
 }
