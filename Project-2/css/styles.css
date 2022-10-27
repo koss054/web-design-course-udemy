@@ -174,6 +174,47 @@ section.best-sellers .product-slider .product .product-info {
     margin-top: 50px;
 }
 
+section.best-sellers .product-slider .product .product-info .categories {
+    color: #3E50E5;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+section.best-sellers .product-slider .product .product-info .title {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+section.best-sellers .product-slider .product .product-info .price {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    line-height: 30px;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+section.best-sellers .product-slider .product .product-info button {
+    height: 50px;
+    width: 219.5px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 220px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
 .discount-price {
     color: gainsboro;
     text-decoration: line-through;
