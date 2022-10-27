@@ -258,3 +258,54 @@ section.newsletter {
     padding: 72px 0;
     margin: 80px auto;
 }
+
+section.newsletter h3 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+section.newsletter p {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section.newsletter form {
+    display: flex;
+    justify-content: center;
+}
+
+section.newsletter form input {
+    height: 50px;
+    width: 326px;
+    max-width: 80%;
+    box-sizing: border-box;
+    border-radius: 170px 0 0 170px;
+    border: 1px solid #3E3E3E;
+    color: #3e3e3e;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    padding-left: 22px;
+}
+
+section.newsletter form button {
+    height: 50px;
+    width: 145px;
+    color: white;
+    max-width: 20%;
+    box-sizing: border-box;
+    border-radius: 0 170px 170px 0;
+    border: 1px solid #3E50E5;
+    background-color: #3E50E5;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 21px
+}
