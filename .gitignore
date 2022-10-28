@@ -1,7 +1,7 @@
-css/
-highlight/
-img/
-tools
-.DS_Store
-*.html
-js/.DS_Store
+javascript_course/css/
+javascript_course/highlight/
+javascript_course/img/
+javascript_course/tools
+javascript_course/.DS_Store
+javascript_course/*.html
+javascript_course/js/.DS_Store
