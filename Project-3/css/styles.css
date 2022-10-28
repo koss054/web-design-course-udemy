@@ -395,6 +395,14 @@ footer .copyright-text {
     .container {
         max-width: 1180px;
     }
+    
+    body {
+        padding-top: 70px;
+    }
+
+    header {
+        height: 70px;
+    }
 }
 /* End of Design for Small Desktop */
 
