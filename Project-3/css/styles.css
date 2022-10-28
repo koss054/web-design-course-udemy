@@ -5,7 +5,8 @@ body {
 }
 
 .container {
-    max-width: 1180px;
+    max-width: 1440px;
+    max-width: 90%;
     margin: auto;
     padding: 0 16px;
 }
@@ -384,3 +385,31 @@ footer .copyright-text {
     letter-spacing: 0.4px;
     line-height: 22px;
 }
+
+/***********************************
+********* CSS Media Queries ********
+***********************************/
+
+/* Start of Design for Small Desktop */
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1180px;
+    }
+}
+/* End of Design for Small Desktop */
+
+/* Start of Desing for Tablet */
+@media screen and (max-width: 960px) {
+    .container {
+        max-width: 92%;
+    }
+}
+/* End of Design for Tablet */
+
+/* Start of Design for Mobile */
+@media screen and (max-width: 576px) {
+    .container {
+        
+    }
+}
+/* End of Design for Mobile */
