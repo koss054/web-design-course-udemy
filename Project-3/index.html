@@ -32,7 +32,12 @@
     </header>
 
     <section class="hero">
-        <img src="images/Hero_image.png" alt="hero-image-smart-watch">
+        <picture>
+            <source media="(max-width: 576px)" srcset="images/Hero_image_mobile.png">
+            <source media="(max-width: 960px)" srcset="images/Hero_image_tablet.png">
+            <source media="(max-width: 1440px)" srcset="images/Hero_image_small_desktop.png">
+            <img src="images/Hero_image_large_desktop.png" alt="hero-image-smart-watch">
+        </picture>
         <div class="hero-content">
             <div class="container">
                 <h1>Explore our new smart watch series</h1>
