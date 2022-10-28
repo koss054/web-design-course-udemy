@@ -56,6 +56,16 @@ header nav ul li {
     display: inline-block;
 }
 
+header nav ul li.menu-icon {
+    display: none;
+}
+
+header nav ul li.menu-icon img {
+    vertical-align: middle;
+    width: 30px;
+    height: 25px;
+}
+
 header nav ul li a {
     color: #3E3E3E;
     font-size: 15px;
@@ -410,6 +420,14 @@ footer .copyright-text {
 @media screen and (max-width: 960px) {
     .container {
         max-width: 92%;
+    }
+
+    header nav ul li {
+        display: none;
+    }
+    
+    header nav ul li.menu-icon {
+        display: inline-block;
     }
 }
 /* End of Design for Tablet */
