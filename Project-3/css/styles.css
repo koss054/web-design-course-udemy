@@ -614,8 +614,18 @@ footer .copyright-text {
         margin: 0 0 12px 0;
     }
 
+    section.best-sellers .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     section.best-sellers .product-slider {
         margin-top: 48px;
+    }
+
+    section.best-sellers .product-slider .product {
+        min-width: 220px;
+        margin: 17px 8px;
     }
     
     section.best-sellers .product-slider .product .product-info .categories {
@@ -734,6 +744,11 @@ footer .copyright-text {
     section.best-sellers {
         padding-top: 64px;
     }
+
+    section.best-sellers .product-slider .product {
+        width: 82%;
+        max-width: 360px;
+    }
     
     section.best-sellers h2 {
         font-size: 24px;
@@ -785,9 +800,6 @@ footer .copyright-text {
         padding: 44px 0;
         margin: 100px auto;
     }
-
-
-
 }
 /* End of Design for Mobile Phones */
 
