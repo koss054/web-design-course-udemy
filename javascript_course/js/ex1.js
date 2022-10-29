@@ -37,3 +37,6 @@ function isPhoneValid(phoneNumber) {
 isPhoneValid(phone1);
 isPhoneValid(phone2);
 isPhoneValid(phone3);
+
+// Fifth problem solution
+console.log(Math.pow(32, 6));
