@@ -19,3 +19,21 @@ let sum = Math.round(firstNumber / secondNumber);
 let sumElement = document.getElementById("result");
 
 sumElement.textContent = sum.toString();
+
+// Fourth problem solution
+let phone1 = "988866552";
+let phone2 = "99087612366";
+let phone3 = 876543123;
+
+function isPhoneValid(phoneNumber) {
+    if (phoneNumber.toString().length == 9) {
+        return console.log(true);
+    }
+    else {
+        return console.log(false);
+    }
+} 
+
+isPhoneValid(phone1);
+isPhoneValid(phone2);
+isPhoneValid(phone3);
