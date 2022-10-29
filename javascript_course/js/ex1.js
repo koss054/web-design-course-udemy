@@ -43,12 +43,12 @@ console.log(Math.pow(32, 6));
 
 // Sixth problem solution
 /*
-a) var NAME;        - valid, but camelCase would be preferable
-b) var $num1;       - invalid, because of symbol in variable name
+a) var NAME;        - valid, this is how we name constants
+b) var $num1;       - valid, js can use $ signs
 c) var typeof;      - invalid, reserved word
-d) var first-name;  - valid, kebab-case
-e) var attempt_2;   - valid, forgot_the_name_of_the_case
-f) var 2ndAttempt;  - invalid, number in variable name
+d) var first-name;  - invalid, dash in the variable name
+e) var attempt_2;   - valid, forgot_the_name_of_the_case - snake_case, i think
+f) var 2ndAttempt;  - invalid, variable name statrs with a number
 g) var full name;   - invalid, space is present in variable name
 */
 
@@ -63,7 +63,7 @@ g) var full name;   - invalid, space is present in variable name
     console.log( (7+5) / number + 2 );  - 4
     console.log(pressure);              - undefined
     console.log(temperature);           - null
-    console.log(typeof pressure);       - undefined/object
+    console.log(typeof pressure);       - undefined
     console.log(typeof temperature);    - object
 */
 
