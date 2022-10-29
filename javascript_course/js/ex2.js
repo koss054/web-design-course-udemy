@@ -11,3 +11,8 @@ document.getElementById("fahr_2").innerHTML =
 
 document.getElementById("fahr_3").innerHTML =
     convertTemperature(parseInt(document.getElementById("celsius_3").innerHTML));
+
+// Second problem solution
+let classification = [ "John Hill" , "Mary Jane", "Gary Vee", "Paricia Mills", "Helen Hall", "Paul Green" ]; 
+
+document.getElementById("best_students").innerHTML = classification.slice(0, 3);
