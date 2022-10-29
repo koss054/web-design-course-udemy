@@ -51,3 +51,18 @@ e) var attempt_2;   - valid, forgot_the_name_of_the_case
 f) var 2ndAttempt;  - invalid, number in variable name
 g) var full name;   - invalid, space is present in variable name
 */
+
+// Seventh problem solution
+/* 
+    var quantity = "25";
+    var number = 6;
+    var pressure;
+    var temperature = null;
+
+    console.log(quantity += quantity);  - "2525"
+    console.log( (7+5) / number + 2 );  - 4
+    console.log(pressure);              - undefined
+    console.log(temperature);           - null
+    console.log(typeof pressure);       - undefined/object
+    console.log(typeof temperature);    - object
+*/
