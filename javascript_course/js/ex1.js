@@ -66,3 +66,16 @@ g) var full name;   - invalid, space is present in variable name
     console.log(typeof pressure);       - undefined/object
     console.log(typeof temperature);    - object
 */
+
+// Eigth problem solution
+let firstUrl = document.getElementById("url_1").innerText;
+let secondUrl = "https://" + firstUrl;
+
+let secondUrlElement = document.getElementById("url_2");
+secondUrlElement.textContent = secondUrl;
+
+let thirdUrl = document.getElementById("url_3").innerText;
+let fourthUrl = thirdUrl.replace("https://", "");
+
+let fourthUrlElement = document.getElementById("url_4");
+fourthUrlElement.textContent = fourthUrl;
