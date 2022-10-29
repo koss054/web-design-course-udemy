@@ -36,3 +36,13 @@ document.getElementById("reviews_5_stars").innerHTML =
     (course["5_stars_reviews"] * 100) /
     (course["5_stars_reviews"] + course["4_stars_reviews"] + course["3_stars_reviews"] + course["2_stars_reviews"] + course["1_stars_reviews"]))
     .toString() + "%";
+
+// Fourth problem solution
+let shoppingList = ["Milk", "Butter", "Juice", "Bread", "Beer", "Rice", "Potatoes", "Chocolate"];
+
+shoppingList.unshift(shoppingList.pop());
+console.log(shoppingList);
+
+shoppingList.push("Cheese");
+shoppingList.push("Eggs");
+console.log(shoppingList);
