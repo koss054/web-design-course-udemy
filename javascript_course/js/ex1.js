@@ -40,3 +40,14 @@ isPhoneValid(phone3);
 
 // Fifth problem solution
 console.log(Math.pow(32, 6));
+
+// Sixth problem solution
+/*
+a) var NAME;        - valid, but camelCase would be preferable
+b) var $num1;       - invalid, because of symbol in variable name
+c) var typeof;      - invalid, reserved word
+d) var first-name;  - valid, kebab-case
+e) var attempt_2;   - valid, forgot_the_name_of_the_case
+f) var 2ndAttempt;  - invalid, number in variable name
+g) var full name;   - invalid, space is present in variable name
+*/
