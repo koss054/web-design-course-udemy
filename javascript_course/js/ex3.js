@@ -90,23 +90,23 @@ let sales = [
 
 let salesElement = document.getElementById("course_sales");
 let totalElement = document.getElementById("total_sold");
-let notRefundedSales = 0;
+let profit = 0;
 
-for (let totalSales = 0; totalSales < sales.length; totalSales++) {
-    if (!sales[totalSales].refundRequested) {
-        if (totalSales == 0) {
-            salesElement.innerHTML = "<tr><td>" + sales[totalSales].student + "</td>" + 
-                                         "<td>" + sales[totalSales].date + "</td>" + 
-                                         "<td>" + sales[totalSales].amount + "</td></tr>";
+for (let i = 0; i < sales.length; i++) {
+    if (!sales[i].refundRequested) {
+        if (i == 0) {
+            salesElement.innerHTML = "<tr><td>" + sales[i].student + "</td>" + 
+                                         "<td>" + sales[i].date + "</td>" + 
+                                         "<td>" + sales[i].amount + "</td></tr>";
 
         } else {
-            salesElement.innerHTML += "<tr><td>" + sales[totalSales].student + "</td>" + 
-                                          "<td>" + sales[totalSales].date + "</td>" + 
-                                          "<td>" + sales[totalSales].amount + "</td></tr>";
+            salesElement.innerHTML += "<tr><td>" + sales[i].student + "</td>" + 
+                                          "<td>" + sales[i].date + "</td>" + 
+                                          "<td>" + sales[i].amount + "</td></tr>";
         }
 
-        notRefundedSales++;
+        profit += parseFloat(sales[i].amount);
     }
 }
 
-totalElement.textContent = notRefundedSales;
+totalElement.textContent = profit;
