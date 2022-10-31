@@ -53,3 +53,60 @@ document.getElementById("calculate").onclick = function() {
         studentResultElement.textContent += "PASSED";
     }
 }
+
+// Fourth problem solution
+let sales = [
+    {
+        'student': 'Jason Gomes',
+        'date': '10/06/2018',
+        'amount': 34.99,
+        'refundRequested': null
+    },
+    {
+        'student': 'Carlos Blue',
+        'date': '10/06/2018',
+        'amount': 29.99,
+        'refundRequested': null
+    },
+    {
+        'student': 'Martin Heyes',
+        'date': '11/06/2018',
+        'amount': 39.99,
+        'refundRequested': '13/06/2018'
+    },
+    {
+        'student': 'Isabella Hopkins',
+        'date': '11/06/2018',
+        'amount': 29.99,
+        'refundRequested': null
+    },
+    {
+        'student': 'Andrew Walt',
+        'date': '12/06/2018',
+        'amount': 34.99,
+        'refundRequested': null
+    }
+];
+
+let salesElement = document.getElementById("course_sales");
+let totalElement = document.getElementById("total_sold");
+let notRefundedSales = 0;
+
+for (let totalSales = 0; totalSales < sales.length; totalSales++) {
+    if (!sales[totalSales].refundRequested) {
+        if (totalSales == 0) {
+            salesElement.innerHTML = "<tr><td>" + sales[totalSales].student + "</td>" + 
+                                         "<td>" + sales[totalSales].date + "</td>" + 
+                                         "<td>" + sales[totalSales].amount + "</td></tr>";
+
+        } else {
+            salesElement.innerHTML += "<tr><td>" + sales[totalSales].student + "</td>" + 
+                                          "<td>" + sales[totalSales].date + "</td>" + 
+                                          "<td>" + sales[totalSales].amount + "</td></tr>";
+        }
+
+        notRefundedSales++;
+    }
+}
+
+totalElement.textContent = notRefundedSales;
