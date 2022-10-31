@@ -70,3 +70,55 @@ document.getElementById("iPhones").onchange = function() {
         }
     }
 }
+
+// Third problem solution
+let isOn = false;
+
+let ms = 0;
+let sec = 0;
+let min = 0;
+let hour = 0;
+
+document.getElementById("start_stop").onclick = function() {
+    isOn = isOn == false ? isOn = true : isOn = false;
+
+    if (isOn) {
+        var stopwatchInterval = window.setInterval(function() {
+            ms++;
+
+            if (ms == 250) {
+                sec++;
+                ms = 0;
+            }
+
+            if (sec == 60) {
+                min++;
+                sec = 0;
+            }
+
+            if (min == 60) {
+                hour++;
+                min = 0;
+            }
+
+            document.getElementById("stopwatch").textContent 
+                = hour + ":" + min + ":" + sec + " " + ms;
+
+            if (!isOn) {
+                clearInterval(stopwatchInterval);
+            }
+        }, 1)
+    } else {
+        document.getElementById("stopwatch").textContent
+            = "00:00:00 000";
+    }
+}
+
+document.getElementById("reset").onclick = function() {
+    isOn = false;
+
+    ms = 0;
+    sec = 0;
+    min = 0;
+    hour = 0;
+}
