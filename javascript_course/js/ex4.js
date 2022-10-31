@@ -31,3 +31,42 @@ document.getElementById("shipments").onchange = function() {
 
     document.getElementById("delivery_fee").textContent = shipments[shipmentType].fee;
 }
+
+// Second problem solution
+let phones = 
+        {
+            'iphone_se_red': {
+                'name': 'iPhone SE 64GB Red',
+                'price': '450',
+                'currency': 'US$',
+                'imageUrl': "https://images.zentail.com/1021/272f41324a8ec0659ee7041c878f5ea0b682b3056482be112a3352dbfb729f63.jpg"
+            },
+            'iphone_11_black': {
+                'name': 'iPhone 11 128GB Black',
+                'price': '869',
+                'currency': 'EUR',
+                'imageUrl': "https://assets.swappie.com/iphon11musta1-300x300.jpg"
+            },
+            'iphone_8_plus_silver': {
+                'name': 'iPhone 8 Plus 64GB Silver',
+                'price': '519',
+                'currency': 'US$',
+                'imageUrl': "https://th.bing.com/th/id/R.d0ec7d2c283165ebc68c0fc56f78f971?rik=6YCtwUCDT%2bo0Qg&pid=ImgRaw&r=0"
+            }
+        };
+
+let currentPhone;
+
+document.getElementById("iPhones").onchange = function() {
+    let radio = document.getElementsByName("product");
+    
+    for (let i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            currentPhone = phones[radio[i].value];
+
+            document.getElementById("phone_image").src = currentPhone.imageUrl;
+            document.getElementById("phone_name").textContent = currentPhone.name;
+            document.getElementById("phone_price").textContent = currentPhone.currency + " " + currentPhone.price;
+        }
+    }
+}
