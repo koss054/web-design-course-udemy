@@ -5,3 +5,8 @@ javascript_course/tools
 javascript_course/.DS_Store
 javascript_course/*.html
 javascript_course/js/.DS_Store
+
+!javascript_course/10-exercise1.html
+!javascript_course/15-exercise2.html
+!javascript_course/24-exercise3.html
+!javascript_course/31-exercise4.html
