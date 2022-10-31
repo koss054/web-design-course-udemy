@@ -18,10 +18,16 @@ document.getElementById("shipments").onchange = function() {
     let shipmentType  = "";
     shipmentType = selectedOption == 1 ? shipmentType = 'standard' : shipmentType = 'express';
 
-    let date = new Date();
-    let currentYear = date.getFullYear();
-    let currentMonth = date.getMonth() + 1;
-    let currentDay = date.getDate();
+    let orderDate = new Date();    
 
-    document.getElementById("order_date").textContent = currentYear + "-" + currentMonth + "-" + currentDay;
+    document.getElementById("order_date").textContent 
+        = orderDate.getFullYear() + "-" + (orderDate.getMonth() + 1) + "-" + orderDate.getDate();
+    
+    let deliveryDate = new Date();
+    deliveryDate.setDate(orderDate.getDate() + shipments[shipmentType].leadTime);
+
+    document.getElementById("delivery_date").textContent 
+        = deliveryDate.getFullYear() + "-" + (deliveryDate.getMonth() + 1) + "-" + deliveryDate.getDate();
+
+    document.getElementById("delivery_fee").textContent = shipments[shipmentType].fee;
 }
