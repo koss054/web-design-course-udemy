@@ -84,9 +84,9 @@ document.getElementById("service-previous").onclick = function() {
 
 // Footer
 
+let currentDate = new Date();
 
-
-  
+document.getElementById("current_year").innerHTML = currentDate.getFullYear();
    
 
 
