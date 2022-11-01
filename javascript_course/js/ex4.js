@@ -29,7 +29,7 @@ document.getElementById("shipments").onchange = function() {
     document.getElementById("delivery_date").textContent 
         = deliveryDate.getFullYear() + "-" + (deliveryDate.getMonth() + 1) + "-" + deliveryDate.getDate();
 
-    document.getElementById("delivery_fee").textContent = shipments[shipmentType].fee;
+    document.getElementById("delivery_fee").textContent = shipments[shipmentType].fee.toFixed(2);
 }
 
 // Second problem solution
