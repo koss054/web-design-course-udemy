@@ -20,8 +20,22 @@ var aboutUs = {
 var unseletectedColor = "#646872";
 var seletectedColor = "#2A2D34";
 
+let aboutUsTabs = document.getElementsByClassName("single-tab");
 
+for (let i = 0; i < aboutUsTabs.length; i++) {
+  aboutUsTabs[i].onclick = function() {
+    aboutUsTabs[i].style.backgroundColor = seletectedColor;
 
+    for (let k = 0; k < aboutUsTabs.length; k++) {
+      if (k != i) {
+        aboutUsTabs[k].style.backgroundColor = unseletectedColor;
+      }
+    }
+
+    let currentTab = aboutUsTabs[i].textContent;
+    document.getElementById("box-text").innerHTML = aboutUs[currentTab];
+  }
+}
 
 // Service slider
 
