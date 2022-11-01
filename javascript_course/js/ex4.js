@@ -86,7 +86,7 @@ document.getElementById("start_stop").onclick = function() {
         var stopwatchInterval = window.setInterval(function() {
             ms++;
 
-            if (ms == 250) {
+            if (ms == 200) {
                 sec++;
 
                 if (sec < 10) {
@@ -108,7 +108,12 @@ document.getElementById("start_stop").onclick = function() {
 
             if (min == 60) {
                 hour++;
-                min = 0;
+
+                if (hour < 10) {
+                    hour = "0" + hour;
+                }
+
+                min = "0" + 0;
             }
 
             if (ms < 10) {
@@ -139,8 +144,10 @@ document.getElementById("start_stop").onclick = function() {
 document.getElementById("reset").onclick = function() {
     isOn = false;
 
-    ms = 0;
-    sec = 0;
-    min = 0;
-    hour = 0;
+    ms = "0" + 0;
+    sec = "0" + 0;
+    min = "0" + 0;
+    hour = "0" + 0;
+
+    ms--;
 }
