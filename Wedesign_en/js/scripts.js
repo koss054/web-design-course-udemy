@@ -62,24 +62,18 @@ var ourServices = [
 let currentServiceIndex = 0;
 
 document.getElementById("service-next").onclick = function() {
-  currentServiceIndex++;
+  currentServiceIndex = currentServiceIndex == ourServices.length - 1 
+    ? currentServiceIndex = 0 : currentServiceIndex += 1; 
 
-  if (currentServiceIndex == ourServices.length) {
-    currentServiceIndex = 0;
-  }
-
-  document.getElementById("service-title").innerHTML = ourServices[currentServiceIndex].title;
+  document.getElementById("service-title").innerHTML = ourServices[currentServiceIndex].title + ".";
   document.getElementById("service-text").innerHTML = ourServices[currentServiceIndex].text;
 }
 
 document.getElementById("service-previous").onclick = function() {
-  currentServiceIndex--;
+  currentServiceIndex = currentServiceIndex == 0 
+    ? currentServiceIndex = ourServices.length - 1 : currentServiceIndex -= 1;
 
-  if (currentServiceIndex < 0) {
-    currentServiceIndex = ourServices.length - 1;
-  }
-
-  document.getElementById("service-title").innerHTML = ourServices[currentServiceIndex].title;
+  document.getElementById("service-title").innerHTML = ourServices[currentServiceIndex].title + ".";
   document.getElementById("service-text").innerHTML = ourServices[currentServiceIndex].text;  
 }
 
