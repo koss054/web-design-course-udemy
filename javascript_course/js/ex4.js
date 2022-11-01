@@ -135,10 +135,7 @@ document.getElementById("start_stop").onclick = function() {
                 clearInterval(stopwatchInterval);
             }
         }, 1)
-    } else {
-        document.getElementById("stopwatch").textContent
-            = "00:00:00 000";
-    }
+    }       
 }
 
 document.getElementById("reset").onclick = function() {
