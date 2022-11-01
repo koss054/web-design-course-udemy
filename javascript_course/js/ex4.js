@@ -76,8 +76,8 @@ let isOn = false;
 
 let ms = 0;
 let sec = "0" + 0;
-let min = 0;
-let hour = 0;
+let min = "0" + 0;
+let hour = "0" + 0;
 
 document.getElementById("start_stop").onclick = function() {
     isOn = isOn == false ? isOn = true : isOn = false;
@@ -98,7 +98,12 @@ document.getElementById("start_stop").onclick = function() {
 
             if (sec == 60) {
                 min++;
-                sec = 0;
+
+                if (min < 10) {
+                    min = "0" + min;
+                }
+
+                sec = "0" + 0;
             }
 
             if (min == 60) {
