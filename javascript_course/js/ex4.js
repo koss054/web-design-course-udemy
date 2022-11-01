@@ -101,8 +101,20 @@ document.getElementById("start_stop").onclick = function() {
                 min = 0;
             }
 
-            document.getElementById("stopwatch").textContent 
-                = hour + ":" + min + ":" + sec + " " + ms;
+            if (ms < 10) {
+                document.getElementById("stopwatch").textContent 
+                = hour + ":" + min + ":" + sec + " 00" + ms;
+            }
+            else if (ms < 100) {
+                document.getElementById("stopwatch").textContent 
+                    = hour + ":" + min + ":" + sec + " 0" + ms;
+            }
+            else {
+                document.getElementById("stopwatch").textContent 
+                    = hour + ":" + min + ":" + sec + " " + ms;
+            }
+
+            
 
             if (!isOn) {
                 clearInterval(stopwatchInterval);
