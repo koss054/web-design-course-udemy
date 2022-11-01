@@ -129,8 +129,6 @@ document.getElementById("start_stop").onclick = function() {
                     = hour + ":" + min + ":" + sec + " " + ms;
             }
 
-            
-
             if (!isOn) {
                 clearInterval(stopwatchInterval);
             }
@@ -146,5 +144,6 @@ document.getElementById("reset").onclick = function() {
     min = "0" + 0;
     hour = "0" + 0;
 
+    // For some reason without this the ms become 001 instead of 000 when the stopwatch is reset
     ms--;
 }
