@@ -75,7 +75,7 @@ document.getElementById("iPhones").onchange = function() {
 let isOn = false;
 
 let ms = 0;
-let sec = 0;
+let sec = "0" + 0;
 let min = 0;
 let hour = 0;
 
@@ -88,6 +88,11 @@ document.getElementById("start_stop").onclick = function() {
 
             if (ms == 250) {
                 sec++;
+
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+
                 ms = 0;
             }
 
