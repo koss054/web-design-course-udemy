@@ -1,4 +1,5 @@
-
+// Solved before watching the videos. The code can be optimized a lot.
+// Didn't think of concating strings and then using them in jQuery.
 var products = {
     'white': {
         
