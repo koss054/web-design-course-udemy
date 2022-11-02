@@ -103,7 +103,6 @@ $(function(){
     // Style functionality
     $("#style").change(function() {
         selectedStyle = $("#style").val();
-
         changeImage(selectedColor, selectedStyle, currentTShirtImage);
         changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
@@ -134,15 +133,28 @@ $(function(){
     }
 
     // Calculate order total function
-    function getOrderTotal(style, quantity, quality, currentProduct) {
+    function getOrderTotal(style, quantity, quality, product) {
         let orderTotal;
         
         orderTotal = quality == "Basic (150g / m2)"
-            ? orderTotal = currentProduct[style]["unit_price"] * quantity
-            : orderTotal = (currentProduct[style]["unit_price"] * quantity)
-                + ((currentProduct[style]["unit_price"] * quantity) * 0.12);
+            ? orderTotal = product[style]["unit_price"] * quantity
+            : orderTotal = (product[style]["unit_price"] * quantity)
+                + ((product[style]["unit_price"] * quantity) * 0.12);
 
-        return orderTotal;
+        return getOrderDiscount(orderTotal, quantity);
+    }
+
+    // Calculate discount function
+    function getOrderDiscount(total, quantity) {
+        if (quantity >= 1000) {
+            total -= total * 0.2;
+        } else if (quantity >= 500) {
+            total -= total * 0.12;
+        } else if (quantity >= 100) {
+            total -= total * 0.05;
+        }
+
+        return total;
     }
 });
 
