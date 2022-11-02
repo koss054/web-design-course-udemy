@@ -50,9 +50,11 @@ var search_params = {
 
 $(function(){
     let selectedQuantity = parseInt($("#quantity").val());
-    let selectedColor = "white";                            // Default color is white
+    let selectedColor = "colored";                            // Default color is colored
     let selectedStyle = $("#style").val();
     let currentTShirtImage = $("#photo-product");
+
+    changeImage(selectedColor, selectedStyle, currentTShirtImage);
 
     // Quantity functionality
     $("#quantity").change(function() {
@@ -65,6 +67,7 @@ $(function(){
         $("#colored").removeClass("selected");
 
         selectedColor = "white";
+        changeImage(selectedColor, selectedStyle, currentTShirtImage);
     });
     
     $("#colored").click(function() {
@@ -72,35 +75,41 @@ $(function(){
         $("#white").removeClass("selected");
 
         selectedColor = "colored";
+        changeImage(selectedColor, selectedStyle, currentTShirtImage);
     });
 
     // Quality of fabric buttons functionality
     $("#q150").click(function() {
         $("#q150").addClass("selected");
         $("#q190").removeClass("selected");
-        console.log("qt150 clicked");
+        
     });
 
     $("#q190").click(function() {
         $("#q190").addClass("selected");
         $("#q150").removeClass("selected");
-        console.log("q190 clicked");
+        
     });
 
     // Style functionality
     $("#style").change(function() {
         selectedStyle = $("#style").val();
+
+        changeImage(selectedColor, selectedStyle, currentTShirtImage);
     });
 
     // Change image function
-/*     function changeImage(color, style, image) {
-        if (color == "") {
-            currentTShirtImage = selectedStyle == "printed"
-            ? currentTShirtImage.attr("src", "img/v-white-personalized.jpg")
-            : currentTShirtImage.attr("src", "img/v-white.jpg");
-        }
-    } */
-
+    function changeImage(color, style, image) {
+        if (color == "white") {
+            image = style == "printed"
+            ? image.attr("src", "img/v-white-personalized.jpg")
+            : image.attr("src", "img/v-white.jpg");
+        } else if (color == "colored") {
+            image = style == "printed"
+            ? image.attr("src", "img/v-color-personalized.png")
+            : image.attr("src", "img/v-color.jpg");
+        }   
+    }
 });
 
 
