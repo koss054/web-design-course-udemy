@@ -50,6 +50,7 @@ var search_params = {
 
 $(function(){
     let selectedQuantity = parseInt($("#quantity").val());
+    let selectedStyle = $("#style").val();
 
     // Quantity functionality
     $("#quantity").change(function() {
@@ -78,6 +79,11 @@ $(function(){
         $("#q190").addClass("selected");
         $("#q150").removeClass("selected");
         console.log("q190 clicked");
+    });
+
+    // Style functionality
+    $("#style").change(function() {
+        selectedStyle = $("#style").val();
     });
 });
 
