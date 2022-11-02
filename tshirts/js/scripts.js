@@ -61,6 +61,11 @@ $(function(){
     // Quantity functionality
     $("#quantity").change(function() {
         selectedQuantity = parseInt($("#quantity").val());
+
+        if (selectedQuantity < 1) {
+            selectedQuantity = 1;
+        }
+
         changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
