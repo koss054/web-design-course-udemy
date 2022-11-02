@@ -49,6 +49,13 @@ var search_params = {
 // Solution:
 
 $(function(){
+    let selectedQuantity = parseInt($("#quantity").val());
+
+    // Quantity functionality
+    $("#quantity").change(function() {
+        selectedQuantity = parseInt($("#quantity").val());
+    });
+
     // Color buttons functionality
     $("#white").click(function() {
         $("#white").addClass("selected");
