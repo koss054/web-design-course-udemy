@@ -19,7 +19,7 @@ deliverDate.setDate(orderDate.getDate() + daysToDeliver);
 console.log(deliverDate); */
 
 // Clock Challenge
-let hoursElement = document.getElementById("hours");
+/* let hoursElement = document.getElementById("hours");
 let minutesElement = document.getElementById("minutes");
 let secondsElement = document.getElementById("seconds");
 
@@ -35,4 +35,16 @@ window.setInterval(function(){
     hoursElement.textContent = hours;
     minutesElement.textContent = minutes;
     secondsElement.textContent = seconds;
-}, 1000);
+}, 1000); */
+
+// jQuery Events Challenge
+$("#fullName").on({
+    keyup: function() {
+        let submitButton = $("#submit");
+        let fullNameLength = $("#fullName").val().length;
+
+        fullNameLength = fullNameLength > 0 
+            ? submitButton.css("display", "inline-block")
+            : submitButton.css("display", "none");
+    }
+});
