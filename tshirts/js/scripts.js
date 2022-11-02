@@ -50,15 +50,28 @@ var search_params = {
 
 $(function(){
     // Color buttons functionality
-    $("#white").click(function(){
+    $("#white").click(function() {
         $("#white").addClass("selected");
         $("#colored").removeClass("selected");
     });
     
-    $("#colored").click(function(){
+    $("#colored").click(function() {
         $("#colored").addClass("selected");
         $("#white").removeClass("selected");
-    })
+    });
+
+    // Quality of fabric buttons functionality
+    $("#q150").click(function() {
+        $("#q150").addClass("selected");
+        $("#q190").removeClass("selected");
+        console.log("qt150 clicked");
+    });
+
+    $("#q190").click(function() {
+        $("#q190").addClass("selected");
+        $("#q150").removeClass("selected");
+        console.log("q190 clicked");
+    });
 });
 
 
