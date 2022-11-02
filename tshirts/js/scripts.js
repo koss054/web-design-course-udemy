@@ -50,11 +50,13 @@ var search_params = {
 
 $(function(){
     let selectedQuantity = parseInt($("#quantity").val());
-    let selectedColor = "colored";                            // Default color is colored
-    let selectedStyle = $("#style").val();
+    let selectedColor = "colored";                              // Default color is colored - can be done better
+    let selectedQuality = "Basic (150g / m2)";                  // Default quality is basic - can be done better
+    let selectedStyle = $("#style").val();                      
     let currentTShirtImage = $("#photo-product");
 
     changeImage(selectedColor, selectedStyle, currentTShirtImage);
+    changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
 
     // Quantity functionality
     $("#quantity").change(function() {
@@ -83,12 +85,14 @@ $(function(){
         $("#q150").addClass("selected");
         $("#q190").removeClass("selected");
         
+        selectedQuality = "Basic (150g / m2)";
     });
 
     $("#q190").click(function() {
         $("#q190").addClass("selected");
         $("#q150").removeClass("selected");
         
+        selectedQuality = "High (190g / m2)";
     });
 
     // Style functionality
@@ -96,6 +100,7 @@ $(function(){
         selectedStyle = $("#style").val();
 
         changeImage(selectedColor, selectedStyle, currentTShirtImage);
+        changeOrderDetails(selectedStyle, selectedQuality);
     });
 
     // Change image function
@@ -109,6 +114,18 @@ $(function(){
             ? image.attr("src", "img/v-color-personalized.png")
             : image.attr("src", "img/v-color.jpg");
         }   
+    }
+
+    // Change order details function
+    function changeOrderDetails(style, quality, color, quantity) {
+        $("#result-style").text(style.charAt(0).toUpperCase() + style.slice(1));
+        $("#result-quality").text(quality);
+        $("#result-color").text(color.charAt(0).toUpperCase() + color.slice(1));
+        $("#result-quantity").text(quantity.toString());
+
+        // Total
+        let currentProduct = products[color];
+        $("#total-price").text((currentProduct[style]["unit_price"] * quantity).toFixed(2));
     }
 });
 
