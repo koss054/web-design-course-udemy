@@ -61,6 +61,7 @@ $(function(){
     // Quantity functionality
     $("#quantity").change(function() {
         selectedQuantity = parseInt($("#quantity").val());
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
     // Color buttons functionality
@@ -70,6 +71,7 @@ $(function(){
 
         selectedColor = "white";
         changeImage(selectedColor, selectedStyle, currentTShirtImage);
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
     
     $("#colored").click(function() {
@@ -78,6 +80,7 @@ $(function(){
 
         selectedColor = "colored";
         changeImage(selectedColor, selectedStyle, currentTShirtImage);
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
     // Quality of fabric buttons functionality
@@ -86,6 +89,7 @@ $(function(){
         $("#q190").removeClass("selected");
         
         selectedQuality = "Basic (150g / m2)";
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
     $("#q190").click(function() {
@@ -93,6 +97,7 @@ $(function(){
         $("#q150").removeClass("selected");
         
         selectedQuality = "High (190g / m2)";
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
     // Style functionality
@@ -100,7 +105,7 @@ $(function(){
         selectedStyle = $("#style").val();
 
         changeImage(selectedColor, selectedStyle, currentTShirtImage);
-        changeOrderDetails(selectedStyle, selectedQuality);
+        changeOrderDetails(selectedStyle, selectedQuality, selectedColor, selectedQuantity);
     });
 
     // Change image function
@@ -125,7 +130,19 @@ $(function(){
 
         // Total
         let currentProduct = products[color];
-        $("#total-price").text((currentProduct[style]["unit_price"] * quantity).toFixed(2));
+        $("#total-price").text(getOrderTotal(style, quantity, quality, currentProduct).toFixed(2));
+    }
+
+    // Calculate order total function
+    function getOrderTotal(style, quantity, quality, currentProduct) {
+        let orderTotal;
+        
+        orderTotal = quality == "Basic (150g / m2)"
+            ? orderTotal = currentProduct[style]["unit_price"] * quantity
+            : orderTotal = (currentProduct[style]["unit_price"] * quantity)
+                + ((currentProduct[style]["unit_price"] * quantity) * 0.12);
+
+        return orderTotal;
     }
 });
 
