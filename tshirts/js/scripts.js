@@ -49,9 +49,16 @@ var search_params = {
 // Solution:
 
 $(function(){
-
-  
+    // Color buttons functionality
+    $("#white").click(function(){
+        $("#white").addClass("selected");
+        $("#colored").removeClass("selected");
+    });
     
+    $("#colored").click(function(){
+        $("#colored").addClass("selected");
+        $("#white").removeClass("selected");
+    })
 });
 
 
