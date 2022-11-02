@@ -50,7 +50,9 @@ var search_params = {
 
 $(function(){
     let selectedQuantity = parseInt($("#quantity").val());
+    let selectedColor = "white";                            // Default color is white
     let selectedStyle = $("#style").val();
+    let currentTShirtImage = $("#photo-product");
 
     // Quantity functionality
     $("#quantity").change(function() {
@@ -61,11 +63,15 @@ $(function(){
     $("#white").click(function() {
         $("#white").addClass("selected");
         $("#colored").removeClass("selected");
+
+        selectedColor = "white";
     });
     
     $("#colored").click(function() {
         $("#colored").addClass("selected");
         $("#white").removeClass("selected");
+
+        selectedColor = "colored";
     });
 
     // Quality of fabric buttons functionality
@@ -85,6 +91,16 @@ $(function(){
     $("#style").change(function() {
         selectedStyle = $("#style").val();
     });
+
+    // Change image function
+/*     function changeImage(color, style, image) {
+        if (color == "") {
+            currentTShirtImage = selectedStyle == "printed"
+            ? currentTShirtImage.attr("src", "img/v-white-personalized.jpg")
+            : currentTShirtImage.attr("src", "img/v-white.jpg");
+        }
+    } */
+
 });
 
 
