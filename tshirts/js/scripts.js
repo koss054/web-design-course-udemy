@@ -162,13 +162,3 @@ $(function(){
         return total;
     }
 });
-
-
-
-
-
-
-
-
-
-
